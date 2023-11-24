@@ -1,9 +1,11 @@
 package com.example.registerwindow
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +17,7 @@ class ItemsAdapter(var items: List<Item>, var context: Context) : RecyclerView.A
         val title: TextView = view.findViewById(R.id.item_list_title)
         val text: TextView = view.findViewById(R.id.item_list_text)
         val price: TextView = view.findViewById(R.id.item_list_price)
+        val button: Button = view.findViewById(R.id.item_list_button)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -38,5 +41,15 @@ class ItemsAdapter(var items: List<Item>, var context: Context) : RecyclerView.A
         )
 
         holder.image.setImageResource(imageId)
+
+        holder.button.setOnClickListener {
+            val intent = Intent(context, ItemActivity::class.java)
+
+            intent.putExtra("itemTitle", items[position].title )
+            intent.putExtra("itemDesc", items[position].desc)
+            intent.putExtra("itemPrice", items[position].price.toString()+"$")
+
+            context.startActivity(intent)
+        }
     }
 }
