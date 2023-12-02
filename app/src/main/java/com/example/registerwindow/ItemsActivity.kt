@@ -1,7 +1,9 @@
 package com.example.registerwindow
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -10,6 +12,7 @@ class ItemsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_items)
 
+        val bruttin: Button = findViewById(R.id.button_to_basket)
         val itemList: RecyclerView = findViewById(R.id.ItemList)
         val items = arrayListOf<Item>()
 
@@ -20,5 +23,10 @@ class ItemsActivity : AppCompatActivity() {
 
         itemList.layoutManager = LinearLayoutManager(this)
         itemList.adapter = ItemsAdapter(items, this)
+
+        bruttin.setOnClickListener {
+            val ssintent = Intent(this, BasketActivity::class.java)
+            startActivity(ssintent)
+        }
     }
 }

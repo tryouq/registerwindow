@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation= "vertical"
-    android:background="#201E28"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/allerta"
-        android:textColor="#fdfdfd"
+        android:textColor="#0ACDA6"
         android:layout_gravity="center"
         android:layout_marginTop="170dp"
         android:textSize="25dp"
@@ -25,7 +25,7 @@
         android:layout_gravity="center"
         android:ems="10"
         android:inputType="text"
-        android:textColor="#fdfdfd"
+        android:textColor="#000000"
         android:textColorHint="#6a6a6a"
         android:layout_marginTop="70dp"
         android:hint="input login" />
@@ -37,7 +37,7 @@
         android:layout_gravity="center"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:textColor="#fdfdfd"
+        android:textColor="#000000"
         android:textColorHint="#6a6a6a"
         android:hint="input mail" />
 
@@ -48,7 +48,7 @@
         android:layout_gravity="center"
         android:ems="10"
         android:inputType="textPassword"
-        android:textColor="#fdfdfd"
+        android:textColor="#000000"
         android:textColorHint="#6a6a6a"
         android:hint="input password" />
 
@@ -58,8 +58,8 @@
         android:layout_height="wrap_content"
         android:text="Register"
         android:layout_gravity="center"
-        android:textColor="#5e4650"
-        android:backgroundTint="#e2a600"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0ACDA6"
         android:layout_marginTop="70dp"/>
     <Button
         android:id="@+id/button_auth"
@@ -68,7 +68,7 @@
         android:text="Authenticate"
         android:layout_gravity="center"
         android:textColor="#fdfdfd"
-        android:backgroundTint="#e2a600"
+        android:backgroundTint="#0ACDA6"
         android:layout_marginTop="70dp"/>
 
 </LinearLayout>

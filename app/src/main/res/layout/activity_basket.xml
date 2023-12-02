@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FFFFFF"
-    tools:context=".ItemsActivity">
+    tools:context=".BasketActivity">
 
 
 
 
     <TextView
+        android:id="@+id/User_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/allerta"
@@ -19,22 +20,34 @@
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:textSize="25dp"
-        android:text="Products" />
+        android:text="TextView" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ItemList"
+        android:layout_width="match_parent"
+        android:layout_height="479dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp" />
+
+    <TextView
+        android:id="@+id/Full_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/allerta"
+        android:textColor="#0ACDA6"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:textSize="25dp"
+        android:text="Full price" />
 
     <Button
-        android:id="@+id/button_to_basket"
+        android:id="@+id/button_buy_basket"
         android:layout_width="160dp"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:backgroundTint="#0ACDA6"
         android:layout_marginTop="20dp"
-        android:text="Basket" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ItemList"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:text="Buy" />
 
 </LinearLayout>

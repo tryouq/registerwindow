@@ -1,11 +1,13 @@
 package com.example.registerwindow
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
+
 
 class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +23,8 @@ class AuthActivity : AppCompatActivity() {
 
 
 
+
+
         linkToReg.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -29,6 +33,10 @@ class AuthActivity : AppCompatActivity() {
 
         button_auth.setOnClickListener {
             val login = userLogin.text.toString().trim()
+
+
+
+
 
             val pass = userPassword.text.toString().trim()
 
@@ -45,6 +53,18 @@ class AuthActivity : AppCompatActivity() {
                 if(isAuth){
 
                     Toast.makeText(this, "User $login is enter", Toast.LENGTH_SHORT).show()
+
+                    val vv = Intent(this, BasketActivity::class.java)
+                        intent.putExtra("UsernameLog", login)
+                        startActivity(vv)
+
+
+
+
+
+
+
+
                     userLogin.text.clear()
                     userPassword.text.clear()
                     val ages = Intent(this, ItemsActivity::class.java)
@@ -60,4 +80,7 @@ class AuthActivity : AppCompatActivity() {
         }
 
     }
+
+
+
 }

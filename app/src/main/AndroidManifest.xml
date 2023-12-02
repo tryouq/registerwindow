@@ -4,7 +4,7 @@
 
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
+        android:maxSdkVersion="34" />
 
     <application
         android:allowBackup="true"
@@ -19,6 +19,9 @@
         <activity
             android:name=".ItemActivity"
             android:exported="false" />
+        <activity
+            android:name=".BasketActivity"
+            android:exported="false"/>
         <activity
             android:name=".ItemsActivity"
             android:exported="false" />
